@@ -1,0 +1,77 @@
+<!-- Header start -->
+<header id="header" class="fixed-top header" role="banner">
+  <a class="navbar-brand navbar-bg" [routerLink]="['/']">
+    <img class="img-fluid float-right" style="height: 50px;" src="assets/images/logo.png" alt="logo"></a>
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+      <button class="navbar-toggler ml-0 border-0 rounded-0 text-white"
+      type="button" data-toggle="collapse"
+        data-target="#navigation"
+        aria-controls="navigation"  aria-label="Toggle navigation">
+				<span class="fa fa-bars"></span>
+			</button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation"
+      [attr.aria-expanded]="!isCollapsed"
+      [ngClass]="isCollapsed?'navbar-collapse text-center collapse show':'navbar-collapse text-center collapse'">
+				<ul class="navbar-nav " (click)="clicked()">
+					<li class="nav-item active">
+            <a class="nav-link" fragment="start"
+             role="button" data-toggle="dropdown" aria-haspopup="true"
+						 [routerLink]="['/']">
+              خانه
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+            <a [routerLink]="['/']" fragment="portfolio" (click)="clicked()"
+            class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true"
+						>
+							محصولات
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" [routerLink]="['/wallpaper']" fragment="portfolio" routerLinkActive="router-link-active">کاغذ دیواری</a>
+							<a class="dropdown-item" [routerLink]="['/poster']" fragment="portfolio" routerLinkActive="router-link-active">پوستر</a>
+							<a class="dropdown-item" [routerLink]="['/curtain']" fragment="portfolio" routerLinkActive="router-link-active" >پرده</a>
+							<a class="dropdown-item" [routerLink]="['/floor']" fragment="portfolio" routerLinkActive="router-link-active">کفپوش</a>
+              <a class="dropdown-item" [routerLink]="['/parquet']" fragment="portfolio" routerLinkActive="router-link-active">پارکت</a>
+              <a class="dropdown-item" [routerLink]="['/falseceiling']" fragment="portfolio" routerLinkActive="router-link-active" >سقف کاذب</a>
+              <a class="dropdown-item" [routerLink]="['/wallplugs']" fragment="portfolio" routerLinkActive="router-link-active">دیوارپوش</a>
+              <a class="dropdown-item" [routerLink]="['/kanuf']" fragment="portfolio" routerLinkActive="router-link-active">کناف</a>
+						</div>
+          </li>
+
+					<li class="nav-item">
+            <a class="nav-link" (click)="clicked()"
+              [routerLink]="['/']"
+              routerLinkActive="router-link-active"
+              fragment="agent"  role="button" data-toggle="dropdown" aria-haspopup="true"
+						>
+							اعطای عاملیت فروش
+						</a>
+          </li>
+         <li class="nav-item">
+            <a class="nav-link" (click)="clicked()"
+              [routerLink]="['/about']"
+              routerLinkActive="router-link-active" fragment="banner-area"
+              role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+						درباره ی ما
+						</a>
+					</li>
+					<li class="nav-item">
+            <a class="nav-link" (click)="clicked()"
+            [routerLink]="['/']"
+              routerLinkActive="router-link-active"
+              fragment="contact"
+               role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							تماس با ما
+						</a>
+</li>
+
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+<!--/ Header end -->

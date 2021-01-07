@@ -1,0 +1,61 @@
+<section id="home" class="p-0">
+  <div id="main-slide" class="carousel slide" data-ride="carousel" data-interval="300000">
+    <div class="overlay"></div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img *ngIf="innerWidth>760" class="d-block w-100" src="assets/images/slider/bg1.jpg" >
+        <img *ngIf="innerWidth<=760&&innerWidth>250" class="d-block w-100" src="assets/images/slider/bg1-m.jpg">
+        <img *ngIf="innerWidth<=250" class="d-block w-100" src="assets/images/slider/bg1-x.jpg" >
+
+        <div class="slider-content">
+          <div class="col-md-12 text-center">
+            <h2 class="animated2">
+              دکوراسیون گل سرخ
+            </h2>
+
+            <p class="animated4"><a [routerLink]="['/']" fragment="portfolio" class="slider btn btn-primary white">محصولات ما</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item full-screen">
+        <img *ngIf="innerWidth>760" class="d-block w-100" src="assets/images/slider/bg2.jpg" >
+        <img *ngIf="innerWidth<=760&&innerWidth>250" class="d-block w-100" src="assets/images/slider/bg2-m.jpg">
+        <img *ngIf="innerWidth<=250" class="d-block w-100" src="assets/images/slider/bg2-x.jpg" >
+
+        <div class="slider-content">
+          <div class="col-md-12 text-center">
+            <h2 class="animated4">
+             اعطای عاملیت فروش
+            </h2>
+
+            <p class="animated6"><a href="#agent" class="slider btn btn-primary white">همکاری با ما</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img *ngIf="innerWidth>760" class="d-block w-100" src="assets/images/slider/bg3.jpg" >
+        <img *ngIf="innerWidth<=760&&innerWidth>250" class="d-block w-100" src="assets/images/slider/bg3-m.jpg">
+        <img *ngIf="innerWidth<=250" class="d-block w-100" src="assets/images/slider/bg3-x.jpg" >
+        <div class="slider-content">
+          <div class="col-md-12 text-center">
+            <h3 class="animated7">دکوراسیون داخلی گل سرخ با بیش از 25 سال سابقه</h3>
+            <h3 class="animated8">
+              به دیدن ما بیایید
+            </h3>
+            <div>
+              <a class="animated4 slider btn btn-primary btn-min-block white"  [routerLink]="['/about']">آدرس فروشگاه</a>
+              <a class="animated4 slider btn btn-primary btn-min-block solid" href="#contact">تماس با ما</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control carousel-control-prev" href="#main-slide" data-slide="prev">
+      <span><i class="fa fa-angle-left"></i></span>
+    </a>
+    <a class="right carousel-control carousel-control-next" href="#main-slide" data-slide="next">
+      <span><i class="fa fa-angle-right"></i></span>
+    </a>
+  </div>
+</section>

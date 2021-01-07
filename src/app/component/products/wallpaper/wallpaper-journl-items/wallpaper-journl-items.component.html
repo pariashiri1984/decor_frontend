@@ -1,0 +1,77 @@
+<div id="banner-area">
+  <img src="../../../assets/images/banner-wallpaper.jpg" alt="" />
+  <div class="parallax-overlay"></div>
+  <!-- Subpage title start -->
+  <div class="banner-title-content">
+    <div class="text-center">
+      <h2>ژورنال {{ currentJournal.Title }}</h2>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item text-white">خانه</li>
+          <li class="breadcrumb-item text-white">محصولات</li>
+          <li class="breadcrumb-item text-white">کاغذ دیواری</li>
+          <li class="breadcrumb-item">ژورنال های {{ currentCategory }}</li>
+          <li class="breadcrumb-item" aria-current="page">
+            {{ currentJournal.Title }}
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Subpage title end -->
+</div>
+<!-- Banner area end -->
+<section id="main-container">
+  <div class="container">
+    <div class="row">
+      <!-- Blog start -->
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <!-- Blog post start -->
+        <div class="post-content">
+
+          <!-- Author info start -->
+          <div class="about-author">
+            <div class="author-img float-left">
+              <img [src]="url + currentJournal.ImgUrl" />
+            </div>
+            <div class="author-info">
+              <h3>نام {{ currentJournal.Title }}</h3>
+              <h3>
+                برند <span>{{ currentJournal.Brand }}</span> سال
+                <span>{{ currentJournal.Year }}</span>
+              </h3>
+              <p>{{ currentJournal.Describtion }}</p>
+            </div>
+          </div>
+          <!-- Author info end -->
+          <div class="entry-content">
+            <!--Isotope  start -->
+            <div class="row no-gutters" id="isotope">
+              <div *ngFor="let cat of items; index as i" [class]="classString">
+                <div class="grid">
+                  <figure class="effect-oscar">
+                    <img [src]="urli + cat.ImgUrl" />
+                    <figcaption>
+                      <a
+                        class="view icon-pentagon"
+                        data-rel="prettyPhoto"
+                        [href]="urli+cat.ImgUrl"
+                      >
+                        <i class="fa fa-search"></i
+                      ></a>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <!-- Isotope item end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <app-sidebar></app-sidebar>
+      </div>
+      <!-- sidebar end -->
+    </div>
+  </div>
+</section>

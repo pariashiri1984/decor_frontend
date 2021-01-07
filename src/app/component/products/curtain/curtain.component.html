@@ -1,0 +1,101 @@
+<div id="banner-area">
+  <img src="../../../assets/images/banner-curtain.jpg" alt="" />
+	<div class="parallax-overlay"></div>
+	<!-- Subpage title start -->
+	<div class="banner-title-content">
+		<div class="text-center">
+			<h2>پرده</h2>
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb justify-content-center">
+					<li class="breadcrumb-item"><a href="#">خانه</a></li>
+					<li class="breadcrumb-item text-white" aria-current="page">پرده</li>
+				</ol>
+			</nav>
+		</div>
+	</div><!-- Subpage title end -->
+</div><!-- Banner area end -->
+<!-- Portfolio start -->
+<!-- Portfolio start -->
+<section id="portfolio" class="portfolio mt-4">
+	<div class="container">
+		<!--Isotope filter start -->
+		<div class="row">
+			<div class="col-lg-12" >
+        <h3 class="text-center">انواع پرده </h3>
+        <br>
+				<div class="isotope-nav" data-isotope-nav="isotope">
+					<ul>
+            <li><a href="#" class="active" data-filter="*">همه ی محصولات</a></li>
+						<li><a href="#" data-filter=".zebra">زبرا</a></li>
+						<li><a href="#" data-filter=".ver">عمودی</a></li>
+						<li><a href="#" data-filter=".hr">افقی</a></li>
+            <li><a href="#" data-filter=".img">پرده تصویری</a></li>
+					</ul>
+				</div>
+			</div>
+		</div><!-- Isotope filter end -->
+	</div>
+<br>
+	<div class="container-fluid " >
+		<div class="row no-gutters isotope" id="isotope">
+      <div *ngFor="let z of numZebra" class="col-lg-2 col-md-2 col-sm-4 col-6 zebra isotope-item">
+				<div class="grid">
+					<figure class="m-0 effect-oscar">
+						<img [src]=urlZebra+z+ex alt="دکوراسیون داخلی کرمانشاه پرده زبرا">
+						<figcaption>
+              <h3>زبرا</h3>
+              <a class="view icon-pentagon" data-rel="prettyPhoto"
+              [href]=urlZebra+z+ex><i
+                class="fa fa-search"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+      </div>
+      <!-- Isotope item end -->
+
+      <div *ngFor="let o of numOfoghi" class="col-lg-2 col-md-2 col-sm-4 col-6 hr isotope-item">
+				<div class="grid">
+					<figure class="m-0 effect-oscar">
+						<img [src]=urlOfoghi+o+ex alt="دکوراسیون داخلی کرمانشاه پرده افقی">
+						<figcaption>
+              <h3>افقی</h3>
+              <a class="view icon-pentagon" data-rel="prettyPhoto"
+              [href]=urlOfoghi+o+ex><i
+                class="fa fa-search"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+      </div><!-- Isotope item end -->
+      <div *ngFor="let a of numAmoodi" class="col-lg-2 col-md-2 col-sm-4 col-6 ver isotope-item">
+				<div class="grid">
+					<figure class="m-0 effect-oscar">
+						<img [src]=urlAmodi+a+ex alt="دکوراسیون داخلی کرمانشاه پرده عمودی">
+						<figcaption>
+              <h3>عمودی</h3>
+              <a class="view icon-pentagon" data-rel="prettyPhoto"
+              [href]=urlAmodi+a+ex><i
+                class="fa fa-search"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+      </div><!-- Isotope item end -->
+      <div *ngFor="let i of numImage" class="col-lg-2 col-md-2 col-sm-4 col-6 img isotope-item">
+				<div class="grid">
+					<figure class="m-0 effect-oscar">
+						<img [src]=urlImage+i+ex alt="دکوراسیون داخلی کرمانشاه پرده تصویری">
+						<figcaption>
+              <h3>تصویری</h3>
+              <a class="view icon-pentagon" data-rel="prettyPhoto"
+              [href]=urlImage+i+ex ><i
+                class="fa fa-search"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+      </div><!-- Isotope item end -->
+
+		</div><!-- Content row end -->
+  </div><!-- Container end -->
+
+</section><!-- Portfolio end -->
+
+

@@ -1,0 +1,34 @@
+.widget-title {
+  text-align: right;
+}
+.banner-title-content,
+h5,p,.author-info {
+  direction: rtl; text-align: right;
+}
+.tc {
+  text-align: center;
+  justify-content: center;
+}
+.widget-categories ul.category-list li a{ color: white;}
+.v{ border-radius: 11px;}
+.g{color: dimgray; font-style: italic;}
+
+.vertical-align {
+  display: flex;
+  flex-direction: row;
+}
+
+.vertical-align > [class^="col-"],
+.vertical-align > [class*=" col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Optional, to align inner items
+                            horizontally inside the column */
+}
+.vertical-align > [class^="col-"] > div,
+.vertical-align > [class*=" col-"] > div {
+  /* flex: 1; */
+  flex-grow: 1;
+}
+
+

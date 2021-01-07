@@ -1,0 +1,58 @@
+<div class="sidebar sidebar-right">
+
+  <!-- Tab widget start-->
+  <div class="widget widget-tab">
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a class="nav-link active" href="#wallpaper-tab" data-toggle="tab">کاغذ دیواری</a></li>
+      <li class="nav-item"><a class="nav-link" href="#recent-tab" data-toggle="tab">پوستر</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane fade show active" id="wallpaper-tab">
+        <ul class="posts-list list-unstyled clearfix">
+          <li *ngFor="let cat of categories;index as i">
+            <div class="posts-thumb float-left">
+                <img alt="img" [src]=url+cat.ImageURL>
+            </div>
+            <div class="post-content">
+              <h4 class="entry-title">
+                <a [routerLink]="['/wallpaper/category/', cat.Id]">{{cat.Title}}</a>
+              </h4>
+            </div>
+            <div class="clearfix"></div>
+        </ul>
+      </div><!-- Popular tabpan end -->
+
+      <div class="tab-pane fade" id="recent-tab">
+        <ul class="posts-list list-unstyled clearfix">
+          <li *ngFor="let pos of posterCats;index as i">
+            <div class="posts-thumb float-left">
+                <img alt="img" [src]=urlp+pos.ImgUrl>
+            </div>
+            <div class="post-content">
+              <h4 class="entry-title">
+             <a [routerLink]="['/poster/category/', pos.Id]">{{pos.Title}}</a>
+              </h4>
+            </div>
+            <div class="clearfix"></div>
+        </ul>
+      </div><!-- Recent tabpan end -->
+
+
+    </div><!-- Tab content end -->
+  </div><!-- Tab widget end-->
+
+  <!-- Blog category start -->
+  <div class="widget widget-categories">
+    <h3 class="widget-title">محصولات</h3>
+    <ul class="category-list clearfix">
+      <li><a [routerLink]="['/wallpaper']">کاغذ دیواری</a></li>
+      <li><a [routerLink]="['/poster']">پوستر </a></li>
+      <li><a [routerLink]="['/curtain']">پرده</a></li>
+      <li><a [routerLink]="['/floor']"> کفپوش</a></li>
+      <li><a [routerLink]="['/parquet']">پارکت</a></li>
+      <li><a [routerLink]="['/falseceiling']">سقف کاذب</a></li>
+      <li><a [routerLink]="['/wallplugs']">دیوارپوش</a></li>
+      <li><a [routerLink]="['/kanuf']">کناف </a></li>
+    </ul>
+  </div><!-- Blog category end -->
+</div><!-- sidebar end -->

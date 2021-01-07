@@ -1,0 +1,12 @@
+.title.classic{float: right;}
+.isotope-nav{float: left; margin: 0; margin-bottom: 1vw;  }
+.title{ border: none;padding-left:0; padding-right: 15px;
+  border-right: 2px solid #e7e7e7;}
+  .title-icon{ margin-left:15px ;}
+  .rtl{direction: rtl;}
+
+  .title-icon{float: right !important;}
+
+.heading{padding-bottom:0}
+
+#isotope .isotope-item .grid{padding: 0;}

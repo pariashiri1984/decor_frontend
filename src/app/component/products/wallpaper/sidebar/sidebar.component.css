@@ -1,0 +1,10 @@
+.widget-title {
+  text-align: right;
+}
+.banner-title-content,
+h5,p,.author-info,.sidebar .widget {
+  direction: rtl; text-align: right;
+}
+.widget-tab .posts-thumb img{border-radius: 100%;}
+.widget-categories ul.category-list li{text-align: right;}
+.widget-tab h4.entry-title{font-size: medium;    padding-top: 1.2rem; padding-right: 0.5rem;}
